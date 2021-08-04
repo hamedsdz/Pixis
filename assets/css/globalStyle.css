@@ -1,0 +1,139 @@
+@font-face {
+	font-family: Vazir;
+	src: url("../../assets/fonts/vazir-font/dist/Vazir-Regular.ttf");
+}
+body,
+html,
+* {
+	font-family: Vazir;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background: #b1bdf8;
+	direction: rtl;
+	overflow-x: hidden;
+}
+
+a {
+	font-size: 1.4rem;
+	text-decoration: none;
+	color: #233862;
+}
+a:hover {
+	color: black;
+	text-decoration: none;
+}
+@keyframes shake-lr {
+	0%,
+	100% {
+		transform: rotate(0deg);
+		transform-origin: 50% 50%;
+	}
+	10% {
+		transform: rotate(8deg);
+	}
+	20%,
+	40%,
+	60% {
+		transform: rotate(-10deg);
+	}
+	30%,
+	50%,
+	70% {
+		transform: rotate(10deg);
+	}
+	80% {
+		transform: rotate(-8deg);
+	}
+	90% {
+		transform: rotate(8deg);
+	}
+}
+@keyframes slideintop {
+	0% {
+		-webkit-transform: translateY(-1000px);
+		transform: translateY(-1000px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes heartbeat {
+	from {
+		transform: scale(1);
+		transform-origin: center center;
+		animation-timing-function: ease-out;
+	}
+	10% {
+		transform: scale(0.91);
+		animation-timing-function: ease-in;
+	}
+	17% {
+		transform: scale(0.98);
+		animation-timing-function: ease-out;
+	}
+	33% {
+		transform: scale(0.87);
+		animation-timing-function: ease-in;
+	}
+	45% {
+		transform: scale(1);
+		animation-timing-function: ease-out;
+	}
+}
+@keyframes jello-diagonal {
+	0% {
+		transform: skew(0deg 0deg);
+	}
+	30% {
+		transform: skew(25deg 25deg);
+	}
+	40% {
+		transform: skew(-15deg, -15deg);
+	}
+	50% {
+		transform: skew(15deg, 15deg);
+	}
+	65% {
+		transform: skew(-5deg, -5deg);
+	}
+	75% {
+		transform: skew(5deg, 5deg);
+	}
+	100% {
+		transform: skew(0deg 0deg);
+	}
+}
+@keyframes shake-left {
+	0%,
+	100% {
+		transform: rotate(0deg);
+		transform-origin: 0 50%;
+	}
+	10% {
+		transform: rotate(2deg);
+	}
+	20%,
+	40%,
+	60% {
+		transform: rotate(-4deg);
+	}
+	30%,
+	50%,
+	70% {
+		transform: rotate(4deg);
+	}
+	80% {
+		transform: rotate(-2deg);
+	}
+	90% {
+		transform: rotate(2deg);
+	}
+}

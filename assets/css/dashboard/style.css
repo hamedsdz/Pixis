@@ -1,0 +1,350 @@
+.Box {
+	background: #d2e0ff;
+	border-radius: 10px;
+	min-height: 550px;
+	padding: 30px;
+	overflow: hidden;
+	margin: 5% auto;
+}
+.Panel {
+	background: #fff;
+	border-radius: 10px;
+	margin-top: 60px;
+	position: relative;
+	padding: 30px 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.Top {
+	position: absolute;
+	height: 120px;
+	width: 120px;
+	background: #fff;
+	border-radius: 60px;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	justify-content: center;
+	margin-top: -120px;
+	left: 50%;
+	top: 25%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+}
+.Top img {
+	width: 70px;
+	transition: 1s;
+	animation: slideintop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.SidePanel {
+	border-left: 1px solid gray;
+	width: 70px;
+	height: 360px;
+	overflow: hidden;
+}
+.SidePanel ul {
+	list-style: none;
+}
+.SidePanel ul li {
+	cursor: pointer;
+	margin: 10px;
+	width: 40px;
+}
+.SidePanel ul li img {
+	width: 40px;
+}
+.SidePanel ul li:hover img {
+	animation: shake-lr 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+.Content {
+	padding: 20px;
+	overflow: hidden;
+	overflow-y: auto;
+	width: 100%;
+	word-wrap: break-word;
+	height: 370px;
+}
+
+@media (max-width: 767px) {
+	.Box {
+		padding: 10px;
+	}
+	.Panel {
+		margin: 10px;
+		flex-direction: column;
+	}
+	.Top {
+		display: none;
+		margin: 0;
+	}
+	.SidePanel {
+		height: 50px;
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid gray;
+		overflow: auto;
+	}
+	.SidePanel ul {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		margin: 5px auto;
+		padding: 0;
+	}
+	.SidePanel ul li {
+		width: 25px;
+		margin: 5px;
+	}
+	.SidePanel ul li img {
+		width: 25px;
+	}
+	.Content {
+		height: 380px;
+	}
+}
+
+/* User Info Component Start */
+
+.userInfo,
+.editPass,
+.notifInfo,
+.settings,
+.AddPost {
+	position: relative;
+	padding: 10px;
+	width: 100%;
+}
+
+.PassBox {
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.round {
+	border-radius: 10px;
+	box-shadow: 0 0px 15px rgba(200, 200, 200, 0.7);
+}
+
+.userInfo form,
+.editPass form,
+.AddPost form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.userInfo form input,
+.userInfo form textarea,
+.editPass form input,
+.editPass form textarea,
+.AddPost form input,
+.AddPost form textarea {
+	margin: 5px auto;
+	font-size: 14px;
+	border-radius: 20px;
+	border: 1px solid #43599e;
+	max-width: 400px;
+	text-align: center;
+	overflow: hidden;
+}
+
+.AddPost .PostList {
+	height: 300px;
+	padding: 0;
+	overflow-x: hidden;
+}
+.AddPost .PostList .Post {
+	cursor: pointer;
+}
+.save-info {
+	padding: 0.7rem 1.3rem;
+	border-radius: 1rem;
+	background: transparent;
+	border: 1px solid #233862;
+	font-size: 16px;
+	line-height: 16px;
+	color: #233862;
+	transition: all 0.3s ease;
+}
+.save-info:hover {
+	color: white;
+	background-color: #233862;
+}
+.userInfo form img,
+.editPass form img {
+	width: 120px;
+	height: 120px;
+	object-fit: cover;
+	border-radius: 100%;
+}
+
+.userInfo form .ProfileImage,
+.editPass form .ProfileImage {
+	display: none;
+}
+
+.userInfo form .ProfileImageLabel,
+.editPass form .ProfileImageLabel {
+	cursor: pointer;
+	height: 25px;
+	width: 25px;
+	border-radius: 1rem;
+	border: 1px solid #233862;
+	font-size: 16px;
+	line-height: 16px;
+	transition: all 0.3s ease;
+	margin-top: -20px;
+	margin-left: 50px;
+	color: #233862;
+	background-color: #d2e0ff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.userInfo form .ProfileImageLabel:hover,
+.editPass form .ProfileImageLabel:hover {
+	background: #51658d;
+	color: #d2e0ff;
+}
+
+.fixed-tab {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+}
+
+.Boxes {
+	margin-top: 35px;
+	overflow: hidden;
+	height: 270px;
+	scroll-behavior: smooth;
+}
+.NotifBox {
+	height: 100%;
+	overflow: hidden;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.NotifBox .notif {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	border-bottom: 1px solid gray;
+}
+.NotifBox .notif.read {
+	background: #d2e0ff;
+}
+.NotifBox .notif.unread {
+	background: #b1bdf8;
+}
+.hidden {
+	display: none;
+}
+#AddNew {
+	cursor: pointer;
+}
+
+@media (max-width: 767px) {
+	.userInfo,
+	.editPass {
+		padding: 0;
+	}
+	.PassBox {
+		height: 330px;
+	}
+}
+
+/* User Info Component Emd */
+/* User Chat Component Style Start */
+.chatContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.chat {
+	padding: 10px;
+	width: 100%;
+	height: 280px;
+	overflow-y: auto;
+	background-image: radial-gradient(gray 0.8px, transparent 0.8px),
+		radial-gradient(gray 0.8px, lightgray 0.8px);
+	background-size: 32px 32px;
+	background-position: 0 0, 16px 16px;
+}
+
+.chat .bubble {
+	display: inline;
+	opacity: 0.9;
+}
+.bubble .inside {
+	background: #b1bdf8;
+	color: black;
+	max-width: 80%;
+	padding: 5px 10px;
+	border-radius: 10px;
+	border-bottom-right-radius: 0;
+	margin: 10px auto;
+	float: right;
+}
+.bubble .outside {
+	background: #d2e0ff;
+	max-width: 80%;
+	padding: 5px 10px;
+	border-radius: 10px;
+	border-bottom-left-radius: 0;
+	margin: 10px auto;
+	float: left;
+}
+.bubble span {
+	font-size: 10px;
+	width: 100%;
+}
+.foot {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+	background: white;
+	padding: 10px;
+}
+.foot .msg {
+	flex-grow: 1;
+	outline: none;
+	font-size: 14px;
+	height: 30px;
+	min-width: 80px;
+	padding: 10px 15px;
+	border: none;
+	box-shadow: 0 0 5px rgba(200, 200, 200, 0.7);
+	border-radius: 20px;
+	margin: auto 15px;
+}
+.foot button {
+	width: 20px;
+	height: 20px;
+	padding: 15px;
+	border-radius: 100px;
+	border: none;
+	background: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 0 5px rgba(200, 200, 200, 0.9);
+	margin-right: 10px;
+}
+
+/* User Chat Component Style End */
+.adminChat .chatContainer .chat {
+	height: 240px;
+}

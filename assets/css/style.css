@@ -1,0 +1,424 @@
+/* Header Component Styles Start*/
+header {
+	background: #b1bdf8;
+	position: relative;
+	height: 70px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 1200px;
+	z-index: 12;
+}
+header a {
+	position: absolute;
+}
+header a img {
+	width: 120px;
+}
+header button {
+	padding: 0.7rem 1.3rem;
+	border-radius: 1rem;
+	background: transparent;
+	border: 1px solid #233862;
+	font-size: 16px;
+	line-height: 16px;
+	color: #233862;
+	transition: all 0.3s ease;
+}
+header button:hover {
+	color: white;
+	background-color: #233862;
+}
+header .login {
+	position: absolute;
+	left: 1rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+header .MenuToggle {
+	display: none;
+}
+header .NavbarCol .NavbarCollapse {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+header .NavbarCol .NavbarCollapse .NavItem {
+	list-style: none;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	margin: 0 1rem;
+}
+header .NavbarCol .NavbarCollapse .NavItem a {
+	color: #233862;
+	cursor: pointer;
+	font-weight: 500;
+	position: relative;
+	text-decoration: none;
+	display: block;
+	padding: 0 1rem;
+	color: #51658d;
+	font-size: 16px;
+	text-align: center;
+}
+header .NavbarCol .NavbarCollapse .NavItem a:hover {
+	color: #233862;
+}
+header .NavbarCol .NavbarCollapse .NavItem a:hover:after {
+	width: 100%;
+	right: 0;
+}
+header .NavbarCol .NavbarCollapse .NavItem a:after {
+	background: none repeat scroll 0 0 transparent;
+	bottom: -8px;
+	content: "";
+	display: block;
+	height: 2px;
+	right: 50%;
+	position: absolute;
+	background: #233862;
+	transition: width 0.5s ease 0s, right 0.3s ease 0s;
+	width: 0;
+}
+header .NavbarCol .NavbarCollapse .NavItem a.active {
+	font-weight: bolder;
+}
+@media (min-width: 769px) {
+	header {
+		justify-content: center;
+	}
+
+	header a {
+		right: 1rem;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+@media (max-width: 769px) {
+	header {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	header a {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	header .login {
+		border: none;
+		padding: 0;
+	}
+	header .login:hover {
+		background: transparent;
+		color: #233862;
+	}
+	header .MenuToggle {
+		display: block;
+		font-size: 2rem;
+		line-height: 2rem;
+		color: #233862;
+		cursor: pointer;
+		width: 2.2rem;
+		height: 2.2rem;
+		position: absolute;
+		top: 50%;
+		right: 1rem;
+		transform: translateY(-50%);
+	}
+	header .MenuToggle:before {
+		content: "\f0c9";
+		font-family: fontAwesome;
+	}
+	header .MenuToggle.active:before {
+		content: "\f00d";
+	}
+	header .NavbarCol {
+		height: 0rem;
+		width: 100%;
+		transition: all 1s ease;
+	}
+	header .NavbarCol.active {
+		height: 7rem;
+		margin-top: 10rem;
+		transition: all 1s;
+	}
+	header .NavbarCol.active .NavbarCollapse {
+		display: block;
+	}
+
+	header .NavbarCol .NavbarCollapse {
+		display: none;
+		padding-top: 1rem;
+		background: linear-gradient(180deg, #b1bdf8, #7a8dee);
+		padding-bottom: 1rem;
+		margin: auto;
+	}
+	header .NavbarCol .NavbarCollapse .NavItem {
+		margin-top: 1.3rem;
+	}
+	header .NavbarCol .NavbarCollapse .NavItem a {
+		margin: 0;
+	}
+}
+
+/* Header Component Styles End*/
+/* Footer Component Styles Start*/
+
+.footer {
+	position: relative;
+	border-top: 9px solid #43599e;
+	background: #d2e0ff;
+	box-shadow: 0 0px 1px #43599e;
+	padding-top: 60px;
+	margin-top: 50px;
+}
+.FootTop {
+	position: absolute;
+	top: 0;
+	margin-top: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.FootLogo {
+	position: absolute;
+	top: 0;
+	margin-top: -30px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.SocialMedia {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.SocialMedia img {
+	width: 30px;
+	margin: 5px;
+	object-fit: cover;
+}
+.SiteInfo {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: 5px;
+}
+.CollapseStyle li a {
+	font-size: 11px;
+	margin: 0;
+	padding: 5px;
+}
+@media (min-width: 576px) {
+	.navStyle {
+		display: flex;
+		flex-direction: column;
+	}
+	.CollapseStyle {
+		display: flex !important;
+		flex-direction: column !important;
+	}
+}
+
+/* Footer Component Styles End*/
+/* Home Component Styles Start*/
+
+/*  Jumbotron  Start*/
+
+.jumbotron {
+	background-color: transparent !important;
+}
+.jumbotron .box {
+	color: #233862;
+	margin-bottom: 5rem;
+}
+.jumbotron .box .banner {
+	width: 80%;
+}
+
+/*  Jumbotron  End*/
+
+.PopWriter {
+	max-height: 60vh;
+	background-color: white;
+	overflow: auto;
+}
+.PopWriter div {
+	cursor: pointer;
+}
+
+.Pops {
+	background-color: #d2e0ff;
+}
+
+.Post .row {
+	height: 240px;
+	cursor: pointer;
+}
+
+.Post .row .col {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.Post .row .clearfix {
+	height: 62%;
+}
+.Like:hover span {
+	animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+/* Home Component Style End */
+/* Posts Component Style Start */
+
+.PostsList {
+	padding: 30px 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* Posts Component Style End */
+/* Post Component Style Start */
+
+.UserInfo,
+.PostInfo,
+.AddComment {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background: #d2e0ff;
+	border-radius: 10px;
+	margin: 20px;
+	overflow: hidden;
+	text-align: center;
+	padding: 0;
+}
+.UserInfo,
+.AddComment {
+	padding: 20px;
+	max-height: 500px;
+	align-items: center;
+}
+.PostInfo {
+	min-height: 400px;
+}
+.PostInfo .PostBody {
+	width: 100%;
+	padding: 20px;
+	min-height: 360px;
+	text-align: justify;
+	flex-grow: 1;
+}
+
+.PostInfo .PostBody h3 {
+	text-align: center;
+	margin: 5px;
+	padding-bottom: 20px;
+}
+.PostInfo .PostFoot {
+	width: 100%;
+	margin: 0;
+	height: 70px;
+	padding: 10px;
+}
+.PostInfo .PostFoot .row {
+	cursor: pointer;
+	color: black;
+}
+.UserInfo .UserProfile img {
+	border-radius: 100%;
+	width: 150px;
+}
+.Profile {
+	padding: 0.7rem 1.3rem;
+	border-radius: 1rem;
+	background: transparent;
+	border: 1px solid #233862;
+	font-size: 16px;
+	line-height: 16px;
+	color: #233862;
+	transition: all 0.3s ease;
+}
+.Profile:hover {
+	color: white;
+	background-color: #233862;
+}
+.Criticisms:hover span {
+	animation: shake-left 0.8s both;
+}
+.Comment:hover span {
+	animation: jello-diagonal 0.8s both;
+}
+/* Post Component Style End */
+/* Profile Post List */
+.PostsInfo {
+	position: relative;
+	background: #d2e0ff;
+	border-radius: 10px;
+	margin: 20px;
+	overflow: hidden;
+	text-align: center;
+	padding: 0;
+}
+.PostsInfo .Post {
+	height: 280px;
+	text-align: center;
+	margin: 10px;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+}
+.PostsInfo .Post .PostBody {
+	padding: 10px;
+	flex-grow: 1;
+}
+
+.PostsInfo .Post .PostFoot {
+	border-top: 1px solid gray;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+.AddComment form {
+	width: 100%;
+}
+.AddComment form input,
+.AddComment form textarea {
+	border-radius: 10px;
+	resize: none;
+}
+.AddComment form button {
+	width: 90%;
+}
+
+.comments-list {
+	padding: 10px;
+	overflow: none;
+	max-height: 420px;
+}
+.comments-list h4 {
+	height: 40px;
+	margin: 15px;
+	border-bottom: 1px solid black;
+}
+.comments-list ul {
+	list-style: none;
+	overflow: hidden;
+	overflow-y: auto;
+	height: calc(100% - 70px);
+}
+.comments-list ul li {
+	width: 100%;
+	border-bottom: 1px solid gray;
+	text-align: right;
+	padding: 0 20px;
+	margin-top: 10px;
+}
